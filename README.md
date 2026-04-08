@@ -25,3 +25,13 @@ python main_freebase.py \
   --LLM_type gpt-3.5-turbo \ # the LLM
   --opeani_api_keys sk-xxxx \ # your own api keys
   --num_workers 10 
+```
+## Evaluation
+
+We adopt **Exact Match** as the evaluation metric. After generating the final prediction file, you can evaluate the results with the following example command:
+
+```bash
+python eval.py \
+  --dataset cwq \
+  --output_file CoG_cwq_gpt-3.5-turbo.jsonl
+```
